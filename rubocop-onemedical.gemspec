@@ -2,7 +2,7 @@ $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require "rubocop/onemedical/version"
 
 Gem::Specification.new do |spec|
-  spec.name = 'cinder'
+  spec.name = 'rubocop-onemedical'
   spec.summary = 'hambones'
   spec.description = 'baloneyboy'
   spec.authors = ['brobeans']

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cinder (0.0.0)
+    rubocop-onemedical (0.0.0)
       rubocop (~> 0.58.0)
       rubocop-rspec (~> 1.30.0)
 
@@ -55,7 +55,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cinder!
+  rubocop-onemedical!
   pry-byebug
   rspec (~> 3.5)
 
