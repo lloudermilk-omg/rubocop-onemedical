@@ -1,0 +1,1633 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+  - "lib/fetcher/generators/fetcher_daemon/templates/daemon"
+  - "db/schema.rb"
+  - "vendor/**/*"
+
+Rails:
+  Enabled: true
+
+Bundler/OrderedGems:
+  TreatCommentsAsGroupSeparators: true
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 20
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: outdent, indent
+Layout/AccessModifierIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 113
+# Cop supports --auto-correct.
+Layout/AlignArray:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 955
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle.
+# SupportedHashRocketStyles: key, separator, table
+# SupportedColonStyles: key, separator, table
+# SupportedLastArgumentHashStyles: always_inspect, always_ignore, ignore_implicit, ignore_explicit
+Layout/AlignHash:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 1016
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: with_first_parameter, with_fixed_indentation
+Layout/AlignParameters:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 89
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleAlignWith.
+# SupportedStylesAlignWith: either, start_of_block, start_of_line
+Layout/BlockAlignment:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 341
+# Cop supports --auto-correct.
+Layout/BlockEndNewline:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 235
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentOneStep, IndentationWidth.
+# SupportedStyles: case, end
+Layout/CaseIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 103
+# Cop supports --auto-correct.
+Layout/ClosingHeredocIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 162
+# Cop supports --auto-correct.
+Layout/ClosingParenthesisIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 50
+# Cop supports --auto-correct.
+Layout/CommentIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/DefEndAlignment:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 519
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: leading, trailing
+Layout/DotPosition:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/ElseAlignment:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/EmptyComment:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 95
+# Cop supports --auto-correct.
+# Configuration parameters: AllowAdjacentOneLineDefs, NumberOfEmptyLines.
+Layout/EmptyLineBetweenDefs:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 396
+# Cop supports --auto-correct.
+Layout/EmptyLines:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 151
+# Cop supports --auto-correct.
+Layout/EmptyLinesAroundAccessModifier:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/EmptyLinesAroundArguments:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/EmptyLinesAroundBeginBody:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 1453
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty_lines, no_empty_lines
+Layout/EmptyLinesAroundBlockBody:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 656
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
+Layout/EmptyLinesAroundClassBody:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 28
+# Cop supports --auto-correct.
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 99
+# Cop supports --auto-correct.
+Layout/EmptyLinesAroundMethodBody:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 114
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
+Layout/EmptyLinesAroundModuleBody:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 35
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleAlignWith, AutoCorrect, Severity.
+# SupportedStylesAlignWith: keyword, variable, start_of_line
+Layout/EndAlignment:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/EndOfLine:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 751
+# Cop supports --auto-correct.
+# Configuration parameters: AllowForAlignment, ForceEqualSignAlignment.
+Layout/ExtraSpacing:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 264
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: consistent, consistent_relative_to_receiver, special_for_inner_method_call, special_for_inner_method_call_in_parentheses
+Layout/FirstParameterIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 162
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: special_inside_parentheses, consistent, align_brackets
+Layout/IndentArray:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/IndentAssignment:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 822
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: special_inside_parentheses, consistent, align_braces
+Layout/IndentHash:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 101
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: auto_detection, squiggly, active_support, powerpack, unindent
+Layout/IndentHeredoc:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 170
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: normal, rails
+Layout/IndentationConsistency:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 323
+# Cop supports --auto-correct.
+# Configuration parameters: Width, IgnoredPatterns.
+Layout/IndentationWidth:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/InitialIndentation:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/LeadingBlankLines:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 544
+# Cop supports --auto-correct.
+Layout/LeadingCommentSpace:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/MultilineArrayBraceLayout:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 441
+# Cop supports --auto-correct.
+Layout/MultilineBlockLayout:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 129
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: symmetrical, new_line, same_line
+Layout/MultilineHashBraceLayout:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 207
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: symmetrical, new_line, same_line
+Layout/MultilineMethodCallBraceLayout:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 822
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: aligned, indented, indented_relative_to_receiver
+Layout/MultilineMethodCallIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/MultilineMethodDefinitionBraceLayout:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 395
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, IndentationWidth.
+# SupportedStyles: aligned, indented
+Layout/MultilineOperationIndentation:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/RescueEnsureAlignment:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceAfterColon:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceAfterMethodName:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceAfterNot:
+  AutoCorrect: false
+  Enabled: true
+
+Layout/SpaceAroundBlockParameters:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 248
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: space, no_space
+Layout/SpaceAroundEqualsInParameterDefault:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/SpaceAroundKeyword:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 1502
+# Cop supports --auto-correct.
+# Configuration parameters: AllowForAlignment.
+Layout/SpaceAroundOperators:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 1792
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: space, no_space
+# SupportedStylesForEmptyBraces: space, no_space
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/SpaceBeforeComma:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceBeforeComment:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 48
+# Cop supports --auto-correct.
+# Configuration parameters: AllowForAlignment.
+Layout/SpaceBeforeFirstArg:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 147
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: require_no_space, require_space
+Layout/SpaceInLambdaLiteral:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 291
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
+# SupportedStyles: space, no_space, compact
+# SupportedStylesForEmptyBrackets: space, no_space
+Layout/SpaceInsideArrayLiteralBrackets:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/SpaceInsideBlockBraces:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 5152
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
+# SupportedStyles: space, no_space, compact
+# SupportedStylesForEmptyBraces: space, no_space
+Layout/SpaceInsideHashLiteralBraces:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 398
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: space, no_space
+Layout/SpaceInsideParens:
+  AutoCorrect: false
+  Enabled: false
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceInsideRangeLiteral:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceInsideReferenceBrackets:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/SpaceInsideStringInterpolation:
+  AutoCorrect: true
+  Enabled: true
+
+Layout/Tab:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 420
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: final_newline, final_blank_line
+Layout/TrailingBlankLines:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 619
+# Cop supports --auto-correct.
+# Configuration parameters: AllowInHeredoc.
+Layout/TrailingWhitespace:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 243
+Lint/AmbiguousBlockAssociation:
+  AutoCorrect: false
+  Enabled: false
+
+Lint/AmbiguousOperator:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 5
+Lint/AmbiguousRegexpLiteral:
+  AutoCorrect: false
+  Enabled: true
+  # Exclude:
+  #   - 'app/mailers/onelife_mailer.rb'
+  #   - 'app/models/credit_card.rb'
+  #   - 'spec/models/b2b_email_domain_spec.rb'
+  #   - 'spec/views/api/v2/admin/patient_medication_regimens/create.json.jbuilder_spec.rb'
+
+# Offense count: 16
+# Configuration parameters: AllowSafeAssignment.
+Lint/AssignmentInCondition:
+  AutoCorrect: false
+  Enabled: true
+  # Exclude:
+  #   - 'app/controllers/account_controller.rb'
+  #   - 'app/controllers/note_controller.rb'
+  #   - 'app/helpers/application_helper.rb'
+  #   - 'app/helpers/lab_data_helper.rb'
+  #   - 'app/helpers/providers_helper.rb'
+  #   - 'app/models/appointment_inventory.rb'
+  #   - 'app/models/lab_data/mapping.rb'
+  #   - 'app/services/appointment_searcher.rb'
+  #   - 'lib/appointment_module.rb'
+  #   - 'lib/electronic-labs/elabs.rb'
+  #   - 'lib/electronic-labs/elabs/adapters.rb'
+  #   - 'lib/flash_mail.rb'
+  #   - 'spec/support/integration/become_true.rb'
+
+Lint/BigDecimalNew:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 7
+Lint/BooleanSymbol:
+  AutoCorrect: false
+  Enabled: true
+  # Exclude:
+  #   - 'app/helpers/offices_helper.rb'
+  #   - 'app/models/email_history.rb'
+  #   - 'app/models/faxed_item.rb'
+  #   - 'app/models/notification.rb'
+  #   - 'app/models/receipt.rb'
+
+Lint/DuplicateMethods:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/DuplicatedKey:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/ElseLayout:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/EmptyWhen:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 26
+Lint/HandleExceptions:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 130
+Lint/IneffectiveAccessModifier:
+  AutoCorrect: false
+  Enabled: false
+
+Lint/InterpolationCheck:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/Loop:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/NestedMethodDefinition:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/NonLocalExitFromIterator:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 114
+Lint/ParenthesesAsGroupedExpression:
+  AutoCorrect: false
+  Enabled: false
+
+Lint/PercentStringArray:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 49
+Lint/RescueException:
+  AutoCorrect: false
+  Enabled: false
+
+Lint/ReturnInVoidContext:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/SafeNavigationChain:
+  AutoCorrect: true
+  Enabled: true
+
+Lint/SafeNavigationConsistency:
+  AutoCorrect: true
+  Enabled: true
+
+Lint/ShadowedException:
+  AutoCorrect: false
+  Enabled: true
+
+Lint/ShadowingOuterLocalVariable:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 97
+# Cop supports --auto-correct.
+Lint/StringConversionInInterpolation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 422
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
+Lint/UnusedBlockArgument:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 124
+# Cop supports --auto-correct.
+# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
+Lint/UnusedMethodArgument:
+  AutoCorrect: false
+  Enabled: false
+
+Lint/UriEscapeUnescape:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 36
+# Configuration parameters: ContextCreatingMethods, MethodCreatingMethods.
+Lint/UselessAccessModifier:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 301
+Lint/UselessAssignment:
+  AutoCorrect: false
+  Enabled: false
+
+Lint/Void:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 1098
+Metrics/AbcSize:
+  Max: 3825
+
+Metrics/BlockLength:
+  Enabled: true
+
+# Offense count: 22
+# Configuration parameters: CountBlocks.
+Metrics/BlockNesting:
+  Max: 6
+
+# Offense count: 139
+# Configuration parameters: CountComments.
+Metrics/ClassLength:
+  Max: 4217
+
+# Offense count: 267
+Metrics/CyclomaticComplexity:
+  Max: 40
+
+# Offense count: 1235
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 4214
+  Exclude:
+  - "db/migrate/**/*"
+
+# Offense count: 20
+# Configuration parameters: CountComments.
+Metrics/ModuleLength:
+  Max: 900
+
+# Offense count: 37
+# Configuration parameters: CountKeywordArgs.
+Metrics/ParameterLists:
+  Max: 12
+
+# Offense count: 232
+Metrics/PerceivedComplexity:
+  Max: 39
+
+# Offense count: 92
+Naming/AccessorMethodName:
+  AutoCorrect: false
+  Enabled: false
+
+Naming/BinaryOperatorParameterName:
+  AutoCorrect: false
+  Enabled: true
+
+Naming/ConstantName:
+  AutoCorrect: false
+  Enabled: true
+
+Naming/HeredocDelimiterCase:
+  AutoCorrect: false
+  Enabled: true
+
+Naming/HeredocDelimiterNaming:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 58
+Naming/MemoizedInstanceVariableName:
+  AutoCorrect: false
+  Enabled: false
+
+Naming/MethodName:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 153
+# Configuration parameters: NamePrefix, NamePrefixBlacklist, NameWhitelist, MethodDefinitionMacros.
+# NamePrefix: is_, has_, have_
+# NamePrefixBlacklist: is_, has_, have_
+# NameWhitelist: is_a?
+# MethodDefinitionMacros: define_method, define_singleton_method
+Naming/PredicateName:
+  AutoCorrect: false
+  Enabled: false
+
+Naming/UncommunicativeBlockParamName:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 64
+# Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
+# AllowedNames: io, id, to, by, on, in, at
+Naming/UncommunicativeMethodParamName:
+  AutoCorrect: false
+  Enabled: false
+
+Naming/VariableName:
+  AutoCorrect: false
+  Enabled: true
+
+Naming/VariableNumber:
+  AutoCorrect: false
+  Enabled: true
+
+Performance/Casecmp:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/CompareWithBlock:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/InefficientHashSearch:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/RedundantBlockCall:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/RedundantMatch:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 42
+# Cop supports --auto-correct.
+# Configuration parameters: MaxKeyValuePairs.
+Performance/RedundantMerge:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 36
+# Cop supports --auto-correct.
+Performance/RegexpMatch:
+  AutoCorrect: false
+  Enabled: false
+
+Performance/ReverseEach:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/Size:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/StartWith:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 24
+# Cop supports --auto-correct.
+Performance/StringReplacement:
+  AutoCorrect: false
+  Enabled: false
+
+Performance/TimesMap:
+  AutoCorrect: true
+  Enabled: true
+
+Performance/UnneededSort:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 529
+# Cop supports --auto-correct.
+Rails/ActiveRecordAliases:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/ApplicationJob:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 319
+# Cop supports --auto-correct.
+Rails/ApplicationRecord:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 92
+# Cop supports --auto-correct.
+# Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
+Rails/Blank:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 20
+# Configuration parameters: Database, Include.
+# SupportedDatabases: mysql, postgresql
+# Include: db/migrate/*.rb
+Rails/BulkChangeTable:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 411
+# Configuration parameters: Include.
+# Include: db/migrate/*.rb
+Rails/CreateTableWithTimestamps:
+  AutoCorrect: false
+  Enabled: false
+  # XXX
+  # Exclude:
+  #   - 'db/migrate/'
+  #   - 'db/migrate/20180105220353_create_indications_table.rb'
+  #   - 'db/migrate/20180411175805_drop_old_med_tables.rb'
+
+# Offense count: 216
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: strict, flexible
+Rails/Date:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/Delegate:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 266
+# Cop supports --auto-correct.
+# Configuration parameters: Whitelist.
+# Whitelist: find_by_sql
+Rails/DynamicFindBy:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/EnvironmentComparison:
+  AutoCorrect: true
+  Enabled: true
+
+Rails/Exit:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 202
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: slashes, arguments
+Rails/FilePath:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 36
+# Cop supports --auto-correct.
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/FindBy:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/FindEach:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 46
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/HasAndBelongsToMany:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 266
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/HasManyOrHasOneDependent:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 28
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: numeric, symbolic
+Rails/HttpStatus:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 169
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/InverseOf:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 18
+# Configuration parameters: Include.
+# Include: app/controllers/**/*.rb
+Rails/LexicallyScopedActionFilter:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/NotNullColumn:
+  AutoCorrect: false
+  Enabled: true
+
+Rails/Output:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 101
+Rails/OutputSafety:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 20
+# Cop supports --auto-correct.
+Rails/PluralizationGrammar:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 59
+# Cop supports --auto-correct.
+Rails/Presence:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 126
+# Cop supports --auto-correct.
+# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
+Rails/Present:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 125
+# Cop supports --auto-correct.
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/ReadWriteAttribute:
+  AutoCorrect: false
+  Enabled: false
+
+Rails/RedundantReceiverInWithOptions:
+  AutoCorrect: true
+  Enabled: true
+
+Rails/RelativeDateConstant:
+  AutoCorrect: true
+  Enabled: true
+
+Rails/ReversibleMigration:
+  AutoCorrect: false
+  Enabled: true
+
+Rails/SafeNavigation:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 629
+# Configuration parameters: Blacklist.
+# Blacklist: decrement!, decrement_counter, increment!, increment_counter, toggle!, touch, update_all, update_attribute, update_column, update_columns, update_counters
+Rails/SkipsModelValidations:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 426
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: strict, flexible
+Rails/TimeZone:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 121
+# Cop supports --auto-correct.
+# Configuration parameters: Include.
+# Include: app/models/**/*.rb
+Rails/Validation:
+  AutoCorrect: false
+  Enabled: false
+
+Security/Eval:
+  AutoCorrect: false
+  Enabled: true
+
+Security/JSONLoad:
+  AutoCorrect: true
+  Enabled: true
+
+Security/Open:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 5
+# Cop supports --auto-correct.
+Security/YAMLLoad:
+  AutoCorrect: false
+  Enabled: false
+  # XXX
+  # Exclude:
+  #   - 'app/models/email_history.rb'
+  #   - 'lib/chart_mailbox.rb'
+  #   - 'spec/models/email_history_spec.rb'
+  #   - 'spec/support/mail_body_matcher.rb'
+
+Style/AccessModifierDeclarations:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 44
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: prefer_alias, prefer_alias_method
+Style/Alias:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 228
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, conditionals
+Style/AndOr:
+  AutoCorrect: false
+  Enabled: false
+
+Style/AsciiComments:
+  AutoCorrect: false
+  Enabled: true
+
+Style/BarePercentLiterals:
+  AutoCorrect: true
+  Enabled: true
+
+Style/BlockComments:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 2694
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, ProceduralMethods, FunctionalMethods, IgnoredMethods.
+# SupportedStyles: line_count_based, semantic, braces_for_chaining
+# ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
+# FunctionalMethods: let, let!, subject, watch
+# IgnoredMethods: lambda, proc, it
+Style/BlockDelimiters:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 707
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: braces, no_braces, context_dependent
+Style/BracesAroundHashParameters:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 89
+Style/CaseEquality:
+  AutoCorrect: false
+  Enabled: false
+
+Style/CharacterLiteral:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 724
+# Cop supports --auto-correct.
+# Configuration parameters: AutoCorrect, EnforcedStyle.
+# SupportedStyles: nested, compact
+Style/ClassAndModuleChildren:
+  AutoCorrect: false
+  Enabled: false
+
+Style/ClassCheck:
+  EnforcedStyle: is_a?
+  AutoCorrect: true
+  Enabled: true
+
+Style/ClassMethods:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 31
+Style/ClassVars:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 57
+# Cop supports --auto-correct.
+Style/ColonMethodCall:
+  AutoCorrect: false
+  Enabled: false
+
+Style/CommandLiteral:
+  AutoCorrect: true
+  Enabled: true
+
+Style/CommentAnnotation:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 82
+Style/CommentedKeyword:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 134
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SingleLineConditionsOnly, IncludeTernaryExpressions.
+# SupportedStyles: assign_to_condition, assign_inside_condition
+Style/ConditionalAssignment:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 148
+Style/DateTime:
+  AutoCorrect: false
+  Enabled: false
+
+Style/DefWithParentheses:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 1545
+Style/Documentation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 22
+Style/DoubleNegation:
+  AutoCorrect: false
+  Enabled: false
+
+Style/EachForSimpleLoop:
+  AutoCorrect: true
+  Enabled: true
+
+Style/EachWithObject:
+  AutoCorrect: true
+  Enabled: true
+
+Style/EmptyCaseCondition:
+  AutoCorrect: false
+  Enabled: true
+
+Style/EmptyElse:
+  AutoCorrect: true
+  Enabled: true
+
+Style/EmptyLiteral:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 37
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: compact, expanded
+Style/EmptyMethod:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 39
+# Cop supports --auto-correct.
+Style/Encoding:
+  AutoCorrect: false
+  Enabled: false
+
+Style/EvalWithLocation:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 20
+# Cop supports --auto-correct.
+Style/ExpandPathArguments:
+  AutoCorrect: false
+  Enabled: false
+
+Style/For:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 23
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: format, sprintf, percent
+Style/FormatString:
+  AutoCorrect: false
+  Enabled: false
+
+Style/FormatStringToken:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 4211
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: when_needed, always, never
+Style/FrozenStringLiteralComment:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 284
+# Configuration parameters: AllowedVariables.
+Style/GlobalVars:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 469
+# Configuration parameters: MinBodyLength.
+Style/GuardClause:
+  AutoCorrect: false
+  Enabled: false
+
+Style/HashSyntax:
+  AutoCorrect: false
+  Enabled: true
+
+Style/IdenticalConditionalBranches:
+  AutoCorrect: false
+  Enabled: true
+
+Style/IfInsideElse:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 845
+# Cop supports --auto-correct.
+Style/IfUnlessModifier:
+  AutoCorrect: false
+  Enabled: false
+
+Style/InverseMethods:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 234
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: line_count_dependent, lambda, literal
+Style/Lambda:
+  AutoCorrect: false
+  Enabled: false
+
+Style/LambdaCall:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 385
+# Cop supports --auto-correct.
+Style/LineEndConcatenation:
+  AutoCorrect: false
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  AutoCorrect: false
+  Enabled: true
+
+Style/MethodDefParentheses:
+  AutoCorrect: true
+  Enabled: true
+
+Style/MissingRespondToMissing:
+  AutoCorrect: false
+  Enabled: true
+
+Style/MixinGrouping:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 20
+Style/MixinUsage:
+  AutoCorrect: false
+  Enabled: false
+
+Style/MultilineBlockChain:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 54
+# Cop supports --auto-correct.
+Style/MultilineIfModifier:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 137
+# Cop supports --auto-correct.
+Style/MultilineIfThen:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 63
+Style/MultilineTernaryOperator:
+  AutoCorrect: false
+  Enabled: false
+
+Style/MultipleComparison:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 308
+# Cop supports --auto-correct.
+Style/MutableConstant:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 151
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: both, prefix, postfix
+Style/NegatedIf:
+  AutoCorrect: false
+  Enabled: false
+
+Style/NegatedWhile:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 239
+# Cop supports --auto-correct.
+# Configuration parameters: Whitelist.
+# Whitelist: be, be_a, be_an, be_between, be_falsey, be_kind_of, be_instance_of, be_truthy, be_within, eq, eql, end_with, include, match, raise_error, respond_to, start_with
+Style/NestedParenthesizedCalls:
+  AutoCorrect: false
+  Enabled: false
+
+Style/NestedTernaryOperator:
+  AutoCorrect: false
+  Enabled: true
+
+# Offense count: 39
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, MinBodyLength.
+# SupportedStyles: skip_modifier_ifs, always
+Style/Next:
+  AutoCorrect: false
+  Enabled: false
+
+Style/NilComparison:
+  AutoCorrect: true
+  Enabled: true
+
+Style/NonNilCheck:
+  AutoCorrect: true
+  Enabled: true
+
+Style/Not:
+  AutoCorrect: false
+  Enabled: true
+
+Style/NumericLiteralPrefix:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 507
+# Cop supports --auto-correct.
+# Configuration parameters: Strict.
+Style/NumericLiterals:
+  MinDigits: 17
+
+# Offense count: 160
+# Cop supports --auto-correct.
+# Configuration parameters: AutoCorrect, EnforcedStyle.
+# SupportedStyles: predicate, comparison
+Style/NumericPredicate:
+  AutoCorrect: false
+  Enabled: false
+
+Style/OneLineConditional:
+  AutoCorrect: true
+  Enabled: true
+
+Style/OrAssignment:
+  AutoCorrect: true
+  Enabled: true
+
+Style/ParallelAssignment:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 237
+# Cop supports --auto-correct.
+# Configuration parameters: AllowSafeAssignment, AllowInMultilineConditions.
+Style/ParenthesesAroundCondition:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 247
+# Cop supports --auto-correct.
+# Configuration parameters: PreferredDelimiters.
+Style/PercentLiteralDelimiters:
+  AutoCorrect: false
+  Enabled: false
+
+Style/PerlBackrefs:
+  AutoCorrect: true
+  Enabled: true
+
+Style/PreferredHashMethods:
+  AutoCorrect: true
+  Enabled: true
+
+Style/Proc:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 53
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: compact, exploded
+Style/RaiseArgs:
+  AutoCorrect: false
+  Enabled: false
+
+Style/RandomWithOffset:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 91
+# Cop supports --auto-correct.
+Style/RedundantBegin:
+  AutoCorrect: false
+  Enabled: false
+
+Style/RedundantConditional:
+  AutoCorrect: true
+  Enabled: true
+
+Style/RedundantException:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 231
+# Cop supports --auto-correct.
+Style/RedundantParentheses:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 231
+# Cop supports --auto-correct.
+# Configuration parameters: AllowMultipleReturnValues.
+Style/RedundantReturn:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 1202
+# Cop supports --auto-correct.
+Style/RedundantSelf:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 82
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, AllowInnerSlashes.
+# SupportedStyles: slashes, percent_r, mixed
+Style/RegexpLiteral:
+  AutoCorrect: false
+  Enabled: false
+
+Style/RescueModifier:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 61
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: implicit, explicit
+Style/RescueStandardError:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 153
+# Cop supports --auto-correct.
+# Configuration parameters: ConvertCodeThatCanStartToReturnNil, Whitelist.
+# Whitelist: present?, blank?, presence, try, try!
+Style/SafeNavigation:
+  AutoCorrect: true
+  Enabled: true
+
+Style/SelfAssignment:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 38
+# Cop supports --auto-correct.
+# Configuration parameters: AllowAsExpressionSeparator.
+Style/Semicolon:
+  AutoCorrect: false
+  Enabled: false
+
+Style/SingleLineMethods:
+  AutoCorrect: true
+  Enabled: true
+  AllowIfMethodIsEmpty: true
+
+Style/SpecialGlobalVars:
+  AutoCorrect: true
+  Enabled: true
+
+Style/StabbyLambdaParentheses:
+  AutoCorrect: true
+  Enabled: true
+
+Style/StderrPuts:
+  AutoCorrect: true
+  Enabled: true
+
+Style/StringLiterals:
+  AutoCorrect: false
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+# Offense count: 123
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: single_quotes, double_quotes
+Style/StringLiteralsInInterpolation:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 786
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, MinSize.
+# SupportedStyles: percent, brackets
+Style/SymbolArray:
+  AutoCorrect: false
+  Enabled: false
+
+Style/SymbolLiteral:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 196
+# Cop supports --auto-correct.
+# Configuration parameters: IgnoredMethods.
+# IgnoredMethods: respond_to, define_method
+Style/SymbolProc:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 72
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, AllowSafeAssignment.
+# SupportedStyles: require_parentheses, require_no_parentheses, require_parentheses_when_complex
+Style/TernaryParentheses:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 1345
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleForMultiline.
+# SupportedStylesForMultiline: comma, consistent_comma, no_comma
+Style/TrailingCommaInArguments:
+  AutoCorrect: false
+  Enabled: false
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  AutoCorrect: true
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  AutoCorrect: true
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingUnderscoreVariable:
+  AutoCorrect: true
+  Enabled: true
+
+Style/TrivialAccessors:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 5
+# Cop supports --auto-correct.
+Style/UnlessElse:
+  Exclude:
+  - 'app/controllers/admin/pharmacies_controller.rb'
+  - 'app/controllers/procedure_controller.rb'
+  - 'app/jobs/deliver_fax_job.rb'
+  - 'app/models/consult_order/pdf.rb'
+  - 'app/models/subscription.rb'
+
+Style/UnneededCondition:
+  AutoCorrect: false # fails to auto-correct in content_blocks
+  Enabled: true
+
+# Offense count: 228
+# Cop supports --auto-correct.
+Style/UnneededInterpolation:
+  AutoCorrect: false
+  Enabled: false
+
+Style/UnpackFirst:
+  AutoCorrect: true
+  Enabled: true
+
+Style/VariableInterpolation:
+  AutoCorrect: false
+  Enabled: true
+
+Style/WhileUntilDo:
+  AutoCorrect: true
+  Enabled: true
+
+Style/WhileUntilModifier:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 532
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, MinSize, WordRegex.
+# SupportedStyles: percent, brackets
+Style/WordArray:
+  AutoCorrect: false
+  Enabled: false
+
+Style/YodaCondition:
+  AutoCorrect: true
+  Enabled: true
+
+# Offense count: 41
+# Cop supports --auto-correct.
+Style/ZeroLengthPredicate:
+  AutoCorrect: false
+  Enabled: false
+
+# Offense count: 24575
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# URISchemes: http, https
+Metrics/LineLength:
+  Max: 69092
